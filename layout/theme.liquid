@@ -18,83 +18,15 @@
 
 	</head>
 
-<body>
-	
-	test
+	<body>
 
-<!--begin header-wrapper-->
-<div id="wrap">
-	<div id="header-wrapper">
+		{% include 'header' %}
 
-  <!--begin header-->
-	<div id="header">
-    
-		<!--begin logo-->
-		<div id="logo">	
-			{% if settings.use_logo_image == true %}<a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
-				{% else %} 
-			<h1><a href="/">{{ shop.name }}</a></h1>
-			{% endif %}
-		</div>
-		<!--end logo-->
-		
-		<!--begin toolbar-->
-		<div id="toolbar">
-			
-			<ul class="toolbar-checkout">
-				<li><a class="large button secondary" href="/checkout">Checkout</a></li>
-			</ul>
-			
-			<ul class="toolbar-cart">
-				<li>Cart: <span class="toolbar-cart-count">
-					<a href="/cart">
-						{% if cart.item_count > 0 %}
-			      	{{ cart.item_count}} {{ cart.item_count | pluralize: 'item', 'items' }}
-			    	{% else %}
-			      	0 items
-			    	{% endif %}
-					</a></span>
-				</li>
-				<li>
-				    {% if shop.customer_accounts_enabled %}
-                      {% if customer  %}
-                        <a href="/account">Welcome {{customer.first_name}}</a> | {{ "Logout" | customer_logout_link }}
-                      {% else %}
-                        {{ "Login" | customer_login_link }}
-                      {% endif %}
-                    {% endif %}
-				</li>
-			</ul>
-			
-		</div>
-		<!--end toolbar-->
-		
-		<!--begin main-navigation-->
-		<div id="main-navigation">
-			<ul>
-				{% for link in linklists.main-menu.links %}{% assign current = false %}{% if template == 'index' and link.url == '/' %}{% assign current = true %}{% elsif collection.url == link.url %}{% assign current = true %}{% elsif blog.url == link.url %}{% assign current = true %}{% elsif page.url == link.url %}{% assign current = true %}{% elsif page_title == link.title %}{% assign current = true %}{% elsif template == 'list-collections' and link.url == '/collections' %}{% assign current = true %}{% elsif page_title == 'Products' and link.url == '/collections/all' %}{% assign current = true %}{% elsif template == 'article' and link.url == article.url %}{% assign current = true %}{% endif %}
-					<li {% if current %} class="current"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
-			</ul>
-		</div>
-		<div style="clear: both"></div>
-		<!--end main-navigation-->
+		{% if template == "index" %}
+			{{ content_for_layout }}
+		{% endif %}
 
-  </div>
-	<!--end header-->
-	
-</div>
-<!--end header-wrapper-->
-
-{% if template == "index" %}
-	{{ content_for_layout }}
-{% endif %}
-
-{% if template != "index" %}
-	
-	<!--begin sub-banner-wrapper-->
-	<div id="sub-banner-wrapper">
-
-		<div id="sub-banner">
+		{% if template != "index" %}
 
 			<div id="home-banner-content">
 				<h2 class="title">
@@ -117,6 +49,7 @@
 			    Search
 	        {% endcase %}
 				</h2>
+				
 				<ul class="breadcrumb">
 					<li><a href="/" title="Back to the frontpage">Home</a></li>
 					{% case template %}
@@ -144,85 +77,16 @@
 	        {% endcase %}
 					</li>
 				</ul>
+		
+				{{ content_for_layout }}
+				
+			{% endif %}	
+		
 			</div>
-
 		</div>
 
-	</div>
-	<!--end sub-banner-wrapper-->
+		{% include 'footer' %}
 
-	<!--begin content-wrapper-->
-	<div id="content-wrapper">    
-
-		<div id="search">
-			<form action="/search" method="get">
-				<input type="text" name="q" id="q" class="search-field" />
-				<input type="image" src="{{ 'btn-search.png' | asset_url }}" class="search-button" name="search-button" onclick="if( this.value == 'Search...' ) {this.value = '';};" id="seek" />
-			</form>
-		</div>
-		
-		{{ content_for_layout }}
-		{% endif %}	
-		
-	</div>
-</div>
-<!--end content-wrapper-->
- 
-<!--begin footer-->
-<div id="footer">
+	</body>
 	
-	<div id="footer-content">
-		
-        <div class="copyright clearfix">
-
-        <p>
-        {% for link in linklists.footer.links %}
-
-          {{ link.title | link_to: link.url }} <span style="color:gray; padding:0 5px">|</span>{% endfor %} 
-
-          Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}.
-
-          {% if settings.include_shopifylink %}{{ powered_by_link }}{% endif %}
-        </p>
-
-      </div><!-- .clearfix -->
-
-		
-		{% if settings.enable_creditcards %}
-    <ul class="credit-cards">
-      {% if settings.show_visa %}
-      <li>{{ 'icon-visa.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_paypal %}
-      <li>{{ 'icon-paypal.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_discover %}
-      <li>{{ 'icon-discover.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_mastercard %}
-      <li>{{ 'icon-mastercard.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_amex %}
-      <li>{{ 'icon-ae.png' | asset_url | img_tag }}</li>
-      {% endif %}
-    </ul>
-    {% endif %}
-	</div>
-	
-</div>
-<!--end footer--> 
-
-<script>
-  jQuery('.cy').load(function() {
-    var h = Math.round(jQuery(this).height() / 2);
-    var ph = Math.round(jQuery(this).parent().height() / 2);
-    jQuery(this).css('paddingTop', ph - h);
-  });
-</script>
-
-</body>
 </html>
