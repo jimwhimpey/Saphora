@@ -1,0 +1,1 @@
+puts %x[gem list]
