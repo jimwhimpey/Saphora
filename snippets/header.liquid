@@ -1,23 +1,27 @@
 <div class="header">
 	
-	<h1><a href="/">{{ shop.name }}</a></h1>
+	<div class="content-inner">
 	
-	<ul class="navigation">
-		{% for link in linklists.main-menu.links %}
-		  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-		{% endfor %}
-	</ul>
+		<h1><a href="/">{{ shop.name }}</a></h1>
 	
-	<ul class="toolbar-cart">
-		<li>Cart: <span class="toolbar-cart-count">
-			<a href="/cart">
-				{% if cart.item_count > 0 %}
-	      	{{ cart.item_count}} {{ cart.item_count | pluralize: 'item', 'items' }}
-	    	{% else %}
-	      	0 items
-	    	{% endif %}
-			</a></span>
-		</li>
-	</ul>
+		<ul class="navigation">
+			{% for link in linklists.main-menu.links %}
+			  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+			{% endfor %}
+		</ul>
+	
+		<ul class="toolbar-cart">
+			<li>Cart: <span class="toolbar-cart-count">
+				<a href="/cart">
+					{% if cart.item_count > 0 %}
+		      	{{ cart.item_count}} {{ cart.item_count | pluralize: 'item', 'items' }}
+		    	{% else %}
+		      	0 items
+		    	{% endif %}
+				</a></span>
+			</li>
+		</ul>
+		
+	</div>
 	
 </div>
