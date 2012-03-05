@@ -51,15 +51,22 @@ table {
       display: block;
       background: url(logo.gif); }
   .header ul.navigation {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-family: Shanti, Helvetica, Arial, sans-serif;
     position: absolute;
     top: 73px;
-    left: 240px;
-    text-transform: uppercase; }
+    left: 250px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; }
     .header ul.navigation li {
       float: left;
       font-size: 14px;
-      margin-right: 30px; }
+      margin-right: 40px; }
       .header ul.navigation li a {
         color: #D095B8;
         text-decoration: none; }
+      .header ul.navigation li a:hover {
+        color: #79E1F0; }
+  .header .cart {
+    position: absolute;
+    top: 30px;
+    right: 0; }

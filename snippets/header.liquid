@@ -6,12 +6,17 @@
 	
 		<ul class="navigation">
 			{% for link in linklists.main-menu.links %}
-			  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% if link.active %}
+					<li class="selected"><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% else %}
+					<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	
-		<ul class="toolbar-cart">
-			<li>Cart: <span class="toolbar-cart-count">
+		<div class="cart">
+			<p>
+				Cart: <span class="toolbar-cart-count">
 				<a href="/cart">
 					{% if cart.item_count > 0 %}
 		      	{{ cart.item_count}} {{ cart.item_count | pluralize: 'item', 'items' }}
@@ -19,8 +24,11 @@
 		      	0 items
 		    	{% endif %}
 				</a></span>
-			</li>
-		</ul>
+			</p>
+			{% if cart.item_count > 0 %}
+				<p><a href="/checkout">Checkout</a></p>
+			{% endif %}
+		</div>
 		
 	</div>
 	

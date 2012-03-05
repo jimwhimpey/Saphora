@@ -8,7 +8,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* SITE WIDE THINGS */
 
 @mixin headings {
-	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-family: Shanti, Helvetica, Arial, sans-serif;
 }
 
 
@@ -42,13 +42,20 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		@include headings;
 		position: absolute;
 		top: 73px;
-		left: 240px;
+		left: 250px;
 		text-transform: uppercase;
+		letter-spacing: 0.2em;
 		li {
 			float: left;
 			font-size: 14px;
-			margin-right: 30px;
+			margin-right: 40px;
 			a { color: #D095B8; text-decoration: none; }
+			a:hover { color: #79E1F0; }
 		}
+	}
+	.cart {
+		position: absolute;
+		top: 30px;
+		right: 0;
 	}
 }
