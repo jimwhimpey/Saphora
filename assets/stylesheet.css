@@ -1,6 +1,6 @@
 /******************************************************************************/
 /* ERIC MEYER'S CSS RESET */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
@@ -28,7 +28,12 @@ table {
   border-spacing: 0; }
 
 /******************************************************************************/
-/* SITE WIDE THINGS */
+/* SASS HELPER */
+/******************************************************************************/
+/* SITE WIDE STUFF */
+body {
+  background: url(bg-page.gif); }
+
 /******************************************************************************/
 /* HEADER */
 .header {
@@ -36,7 +41,7 @@ table {
   height: 164px;
   background: #2f292b url(bg-header.gif); }
   .header .content-inner {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     position: relative; }
   .header h1, .header h1 a {
@@ -51,7 +56,7 @@ table {
       display: block;
       background: url(logo.gif); }
   .header ul.navigation {
-    font-family: Shanti, Helvetica, Arial, sans-serif;
+    font-family: "Din Display Pro Medium", Helvetica, Arial, sans-serif;
     position: absolute;
     top: 73px;
     left: 250px;
@@ -60,6 +65,7 @@ table {
     .header ul.navigation li {
       float: left;
       font-size: 14px;
+      font-weight: normal;
       margin-right: 40px; }
       .header ul.navigation li a {
         color: #D095B8;
@@ -69,4 +75,35 @@ table {
   .header .cart {
     position: absolute;
     top: 30px;
-    right: 0; }
+    right: 30px; }
+
+/******************************************************************************/
+/* HOMEPAGE BANNER */
+.banner {
+  width: 100%;
+  height: 350px;
+  background: #79e1f0 url(bg-banner.gif); }
+  .banner .content-inner {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    height: 260px;
+    padding: 90px 0 0 0;
+    background: url(dirtygirl.jpg) no-repeat top right; }
+    .banner .content-inner h2, .banner .content-inner p {
+      width: 440px;
+      text-align: center;
+      color: #0E2A2E; }
+    .banner .content-inner h2 {
+      font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+      font-size: 34px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 70px 0 0 0;
+      margin: 0 0 20px 0;
+      background: url(bird-blue.gif) no-repeat top center; }
+    .banner .content-inner p {
+      font-family: Georgia, Times, serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #234F55; }

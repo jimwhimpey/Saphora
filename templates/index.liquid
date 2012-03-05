@@ -1,38 +1,4 @@
-{% if settings.home_banner %}
-<!--begin home-banner-wrapper-->
-<div id="home-banner-wrapper">
-	
-	TESTS
-	
-	<div id="home-banner">
-		
-		<div id="home-banner-content">
-			<h2 class="title">{{ settings.home_banner_title }}</h2>
-			<p>{{ settings.home_banner_description }}</p>
-			{% if settings.home_banner_button %}
-			
-			<a class="large button main" href="/collections/all">{{ settings.home_banner_button_title }}</a>
-			
-			{% endif %}
-		</div>
-
-		<div id="home-banner-image">
-			<img src="{{ 'home-banner-img.png' | asset_url }}" alt="{{ shop.name }}" />
-		</div>
-	
-	</div>
-	
-</div>
-<!--end home-banner-wrapper-->
-{% else %}
-
-<!--begin home-banner-wrapper-no-banner-->
-<div id="home-banner-wrapper-no-banner">
-	
-</div>
-<!--end home-banner-wrapper-no-banner-->
-
-{% endif %}
+{% include 'banner' %}
 
 <!--begin content-wrapper-->
 <div id="content-wrapper">

@@ -1,61 +1,119 @@
 /******************************************************************************/
 /* ERIC MEYER'S CSS RESET */
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 
 /******************************************************************************/
-/* SITE WIDE THINGS */
+/* SASS HELPER */
 
-@mixin headings {
-	font-family: Shanti, Helvetica, Arial, sans-serif;
-}
+	@mixin headings {
+		font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+	}
+
+	@mixin content-inner {
+		width: 1000px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+
+/******************************************************************************/
+/* SITE WIDE STUFF */
+
+	body {
+		background: url(bg-page.gif);
+		}
 
 
 /******************************************************************************/
 /* HEADER */
 
-.header {
-	width: 100%;
-	height: 164px;
-	background: #2F292B url(bg-header.gif);
-	.content-inner {
-		width: 800px;
-		margin: 0 auto;
-		position: relative;
-	}
-	h1, h1 a {
-		width: 193px;
-		height: 77px;
-	}
-	h1 {
-		position: absolute;
-		top: 42px;
-		left: 0;
-		text-indent: -9999px;
-		a { 
-			display: block;
-			background: url(logo.gif);	
+	.header {
+		width: 100%;
+		height: 164px;
+		background: #2F292B url(bg-header.gif);
+		.content-inner { @include content-inner; }
+		h1, h1 a {
+			width: 193px;
+			height: 77px;
+		}
+		h1 {
+			position: absolute;
+			top: 42px;
+			left: 0;
+			text-indent: -9999px;
+			a { 
+				display: block;
+				background: url(logo.gif);	
+			}
+		}
+		ul.navigation {
+			font-family: "Din Display Pro Medium", Helvetica, Arial, sans-serif;
+			position: absolute;
+			top: 73px;
+			left: 250px;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			li {
+				float: left;
+				font-size: 14px;
+				font-weight: normal;
+				margin-right: 40px;
+				a { color: #D095B8; text-decoration: none; }
+				a:hover { color: #79E1F0; }
+			}
+		}
+		.cart {
+			position: absolute;
+			top: 30px;
+			right: 30px;
 		}
 	}
-	ul.navigation {
-		@include headings;
-		position: absolute;
-		top: 73px;
-		left: 250px;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		li {
-			float: left;
-			font-size: 14px;
-			margin-right: 40px;
-			a { color: #D095B8; text-decoration: none; }
-			a:hover { color: #79E1F0; }
+
+
+/******************************************************************************/
+/* HOMEPAGE BANNER */
+
+	.banner {
+		width: 100%;
+		height: 350px;
+		background: #79E1F0 url(bg-banner.gif);
+		.content-inner { 
+			@include content-inner;
+			height: 260px;
+			padding: 90px 0 0 0;
+			background: url(dirtygirl.jpg) no-repeat top right;
+			h2, p {
+				width: 440px;
+				text-align: center;
+				color: #0E2A2E;
+			}
+			h2 {
+				@include headings;
+				font-size: 34px;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				padding: 70px 0 0 0;
+				margin: 0 0 20px 0;
+				background: url(bird-blue.gif) no-repeat top center;
+			}
+			p {
+				font-family: Georgia, Times, serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #234F55;
+			}
 		}
 	}
-	.cart {
-		position: absolute;
-		top: 30px;
-		right: 0;
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
