@@ -1,67 +1,24 @@
 {% include 'banner' %}
 
-<!--begin content-wrapper-->
-<div id="content-wrapper">
+<div id="content">
 	
-	<div id="featured-products">
+	{{ products.size }}
+	
+	<div class="content-inner">
 		
-		<div id="search">
-			<form action="/search" method="get">
-				<input type="text" name="q" id="q" class="search-field" />
-				<input type="image" src="{{ 'btn-search.png' | asset_url }}" class="search-button" name="search-button" onclick="if( this.value == 'Search...' ) {this.value = '';};" id="seek" />
-			</form>
-		</div>
-        
-        {% if settings.home_collections_featured %}
-		<h3 class="featured-products-title">Featured Collections:</h3>
-        {% else %}
-		<h3 class="featured-products-title">Featured Products:</h3>
-        {% endif %}
-
-        {% if settings.home_collections_featured %}
-        
-    	{% if linklists[settings.home_collections_featured_linklist].links.size > 0 %}
-		<table border="0" cellpadding="0" cellspacing="0">
-		  {% tablerow link in linklists[settings.home_collections_featured_linklist].links cols: 4 limit: 12 %}
-		  <ul class="featured-product">
+		<ul class="product-collection">		
+		  {% for product in collections.all.products %}
 		    <li>
-					<a href="{{ link.url }}">
-						<span class="product-image-wrapper"><img class="product-image cy" src="{{ link.object.products.first.images.first | product_img_url: 'medium' }}" width="170px" alt="{{ link.title | escape }}" /></span>
-						<span class="product-name">{{ link.title }}</span>
-						<br /><span class="small button details">DETAILS</span>
+					<a href="{{ product.url }}" class="product-image">
+						<img src="{{ product.images.first | product_img_url: 'medium' }}" width="170px" alt="{{ product.title | escape }}" />
 					</a>
+					<h2 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h2>
+					<p class="product-description">{{ product.description | strip_html }} <a href="{{ product.url }}">More details</a></p>
+					<p class="product-price">${{ product.price | money_without_currency }}</p>
+					<p class="product-add"><a href="#">Add to Cart</a></p> 
 				</li>
-		  </ul>
-		  {% endtablerow %}
-		</table>
-		{% else %}
-		  <p>Go to the Home Page section in your theme settings to select a link list to feature collections here. That link list must be populated with links to collections. Don't have such a link list? Create one under the Navigation tab in your shop admin.</p>
-		</div>
-		{% endif %}
-
-        {% else %}
-        
-		{% if collections.frontpage.handle == "frontpage" %}
-		<table border="0" cellpadding="0" cellspacing="0">
-		  {% tablerow product in collections.frontpage.products cols: 4 limit: 12 %}
-		  <ul class="featured-product">
-		    <li>
-					<a href="{{ product.url | within: collections.frontpage }}">
-						<span class="product-image-wrapper"><img class="product-image cy" src="{{ product.images.first | product_img_url: 'medium' }}" width="170px" alt="{{ product.title | escape }}" /></span>
-						<span class="product-name">{{ product.title }}</span>
-						<span class="featured-price">{% if product.compare_at_price_max > product.price %}<em>was {{ product.compare_at_price_max | money }}</em>{% endif %}<strong>{{ product.price  | money }}</strong></span>
-						<br /><span class="small button details">DETAILS</span>
-					</a>
-				</li>
-		  </ul>
-		  {% endtablerow %}
-		</table>
-		{% else %}
-		  <p>You need to create a collection with the handle "frontpage"</p>
-		</div>
-		{% endif %}
-        
-        {% endif %}
+		  {% endfor %}
+		</ul>
 	
 	</div>
 	

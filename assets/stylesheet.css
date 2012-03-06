@@ -107,3 +107,43 @@ body {
       font-style: italic;
       font-size: 15px;
       color: #234F55; }
+
+/******************************************************************************/
+/* MAIN CONTENT AREA */
+#content .content-inner {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative; }
+#content ul.product-collection {
+  padding: 50px 0; }
+  #content ul.product-collection li {
+    width: 490px;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+    float: left; }
+    #content ul.product-collection li:nth-child(2n) {
+      float: right; }
+    #content ul.product-collection li a.product-image {
+      width: 170px;
+      float: left;
+      margin-right: 20px; }
+    #content ul.product-collection li h2.product-name {
+      font-family: "Din Display Pro", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin: 30px 0 10px 0; }
+      #content ul.product-collection li h2.product-name a {
+        color: #0E2A2E;
+        text-decoration: none; }
+    #content ul.product-collection li p.product-description,
+    #content ul.product-collection li p.product-price {
+      font-family: Georgia, Times, serif; }
+    #content ul.product-collection li p.product-description {
+      font-size: 14px;
+      line-height: 1.6em;
+      color: #0E2A2E;
+      margin: 0 0 10px 0; }
+    #content ul.product-collection li p.product-price {
+      font-size: 30px;
+      margin: 0 0 20px 0; }
