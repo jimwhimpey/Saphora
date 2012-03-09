@@ -7,9 +7,9 @@
 /******************************************************************************/
 /* SASS HELPER */
 
-	@mixin headings {
-		font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-	}
+	@mixin headings { font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif; }
+	@mixin sans { font-family: "Din Display Pro", Helvetica, Arial, sans-serif; }
+	@mixin serif { font-family: "chaparral-pro", Georgia, Times, serif; }
 
 	@mixin content-inner {
 		width: 1000px;
@@ -114,37 +114,107 @@
 	#content {
 		.content-inner { @include content-inner; }
 		ul.product-collection {
-			padding: 50px 0;
+			padding: 70px 0;
 			li {
 				width: 490px;
 				overflow: hidden;
-				margin: 0 0 50px 0;
+				margin: 0 0 70px 0;
 				float: left;
 				&:nth-child(2n) { float: right; }
 				a.product-image {
-					width: 170px;
+					width: 220px;
 					float: left;
 					margin-right: 20px;
 				}
-				h2.product-name {
-					font-family: "Din Display Pro", Helvetica, Arial, sans-serif;
-					font-size: 16px;
-					letter-spacing: 0.2em;
-					text-transform: uppercase;
-					margin: 30px 0 10px 0;
-					a { color: #0E2A2E; text-decoration: none; }
-				}
-				p.product-description,
-				p.product-price  { font-family: Georgia, Times, serif; }
-				p.product-description {
-					font-size: 14px;
-					line-height: 1.6em;
-					color: #0E2A2E;
-					margin: 0 0 10px 0;
-				}
-				p.product-price {
-					font-size: 30px;
-					margin: 0 0 20px 0;
+				div.product-details {
+					float: right;
+					width: 245px;
+					h2.product-name {
+						@include sans;
+						font-size: 16px;
+						letter-spacing: 0.2em;
+						text-transform: uppercase;
+						margin: 10px 0 10px 0;
+						a { color: #0E2A2E; text-decoration: none; }
+					}
+					p.product-description,
+					p.product-price  { @include serif; }
+					p.product-description {
+						font-size: 16px;
+						line-height: 1.6em;
+						color: #0E2A2E;
+						margin: 0 0 10px 0;
+						a { color: #D095B8; text-decoration: none; }
+						a:hover { color: #000; }
+					}
+					p.product-price {
+						font-size: 30px;
+						margin: 0 0 20px 0;
+					}
+					p.product-add a {
+						@include headings;
+						text-decoration: none;
+						text-transform: uppercase;
+						letter-spacing: 0.2em;
+					  display: inline-block;
+					  padding: 4px 10px 4px;
+					  margin-bottom: 0;
+					  font-size: 13px;
+					  line-height: 18px;
+					  color: #333333;
+					  text-align: center;
+					  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+					  vertical-align: middle;
+					  background-color: #f5f5f5;
+					  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+					  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+					  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+					  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+					  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+					  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+					  background-repeat: repeat-x;
+					  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+					  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+					  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+					  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+					  border: 1px solid #ccc;
+					  border-bottom-color: #bbb;
+					  -webkit-border-radius: 4px;
+					  -moz-border-radius: 4px;
+					  border-radius: 4px;
+					  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+					  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+					  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+					  cursor: pointer;
+					  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+					  *margin-left: .3em;
+					  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+					  color: #ffffff;
+					  background-color: #5bb75b;
+					  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+					  background-image: -ms-linear-gradient(top, #62c462, #51a351);
+					  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+					  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+					  background-image: -o-linear-gradient(top, #62c462, #51a351);
+					  background-image: linear-gradient(top, #62c462, #51a351);
+					  background-repeat: repeat-x;
+					  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+					  border-color: #51a351 #51a351 #387038;
+					  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+					  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+						
+						&:hover {
+						  color: #FFF;
+						  text-decoration: none;
+						  background-color: #51a351;
+						  background-position: 0 -15px;
+						  -webkit-transition: background-position 0.1s linear;
+						  -moz-transition: background-position 0.1s linear;
+						  -ms-transition: background-position 0.1s linear;
+						  -o-transition: background-position 0.1s linear;
+						  transition: background-position 0.1s linear;
+						}
+					}
 				}
 			}
 		}

@@ -115,35 +115,104 @@ body {
   margin: 0 auto;
   position: relative; }
 #content ul.product-collection {
-  padding: 50px 0; }
+  padding: 70px 0; }
   #content ul.product-collection li {
     width: 490px;
     overflow: hidden;
-    margin: 0 0 50px 0;
+    margin: 0 0 70px 0;
     float: left; }
     #content ul.product-collection li:nth-child(2n) {
       float: right; }
     #content ul.product-collection li a.product-image {
-      width: 170px;
+      width: 220px;
       float: left;
       margin-right: 20px; }
-    #content ul.product-collection li h2.product-name {
-      font-family: "Din Display Pro", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin: 30px 0 10px 0; }
-      #content ul.product-collection li h2.product-name a {
+    #content ul.product-collection li div.product-details {
+      float: right;
+      width: 245px; }
+      #content ul.product-collection li div.product-details h2.product-name {
+        font-family: "Din Display Pro", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin: 10px 0 10px 0; }
+        #content ul.product-collection li div.product-details h2.product-name a {
+          color: #0E2A2E;
+          text-decoration: none; }
+      #content ul.product-collection li div.product-details p.product-description,
+      #content ul.product-collection li div.product-details p.product-price {
+        font-family: "chaparral-pro", Georgia, Times, serif; }
+      #content ul.product-collection li div.product-details p.product-description {
+        font-size: 16px;
+        line-height: 1.6em;
         color: #0E2A2E;
-        text-decoration: none; }
-    #content ul.product-collection li p.product-description,
-    #content ul.product-collection li p.product-price {
-      font-family: Georgia, Times, serif; }
-    #content ul.product-collection li p.product-description {
-      font-size: 14px;
-      line-height: 1.6em;
-      color: #0E2A2E;
-      margin: 0 0 10px 0; }
-    #content ul.product-collection li p.product-price {
-      font-size: 30px;
-      margin: 0 0 20px 0; }
+        margin: 0 0 10px 0; }
+        #content ul.product-collection li div.product-details p.product-description a {
+          color: #D095B8;
+          text-decoration: none; }
+        #content ul.product-collection li div.product-details p.product-description a:hover {
+          color: #000; }
+      #content ul.product-collection li div.product-details p.product-price {
+        font-size: 30px;
+        margin: 0 0 20px 0; }
+      #content ul.product-collection li div.product-details p.product-add a {
+        font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        display: inline-block;
+        padding: 4px 10px 4px;
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 18px;
+        color: #333333;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, white, #e6e6e6);
+        background-image: -ms-linear-gradient(top, white, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+        background-image: -o-linear-gradient(top, white, #e6e6e6);
+        background-image: linear-gradient(top, white, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+        *margin-left: .3em;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        background-color: #5bb75b;
+        background-image: -moz-linear-gradient(top, #62c462, #51a351);
+        background-image: -ms-linear-gradient(top, #62c462, #51a351);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+        background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+        background-image: -o-linear-gradient(top, #62c462, #51a351);
+        background-image: linear-gradient(top, #62c462, #51a351);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+        border-color: #51a351 #51a351 #387038;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+        #content ul.product-collection li div.product-details p.product-add a:hover {
+          color: #FFF;
+          text-decoration: none;
+          background-color: #51a351;
+          background-position: 0 -15px;
+          -webkit-transition: background-position 0.1s linear;
+          -moz-transition: background-position 0.1s linear;
+          -ms-transition: background-position 0.1s linear;
+          -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear; }
