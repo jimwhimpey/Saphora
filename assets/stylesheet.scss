@@ -97,7 +97,7 @@
 			}
 		}
 		ul.navigation {
-			font-family: "Din Display Pro Medium", Helvetica, Arial, sans-serif;
+			@include headings;
 			position: absolute;
 			top: 73px;
 			left: 250px;
@@ -113,9 +113,18 @@
 			}
 		}
 		.cart {
+			@include headings;
+			color: #FFF;
+			text-transform: uppercase;
+			text-align: right;
+			letter-spacing: 0.2em;
+			font-size: 14px;
 			position: absolute;
-			top: 30px;
+			top: 73px;
 			right: 30px;
+			width: 300px;
+			a { text-decoration: none; color: #79E1F0; }
+			a:hover { color: #D095B8; }
 		}
 	}
 
