@@ -169,7 +169,10 @@
 /* MAIN CONTENT AREA */
 
 	#content {
-		.content-inner { @include content-inner; }
+		.content-inner { 
+			@include content-inner;
+			overflow: hidden;	
+		}
 		ul.product-collection {
 			padding: 70px 0;
 			li {
@@ -217,6 +220,47 @@
 	}
 
 
+/******************************************************************************/
+/* FOOTER */
+
+	#footer {
+		height: 285px;
+		background: #2F292B url(bg-header.gif);
+		.content-inner { 
+			@include content-inner;
+			background: url(bird-brown.gif) no-repeat center center;
+			overflow: hidden;
+			.contact-info,
+			.store-info {
+				line-height: 1.5em;
+				padding: 60px 0 0 0;
+				h2 {
+					@include headings;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+					color: #9A9A9A;
+					margin: 0 0 15px 0;
+				}
+				ul {
+					@include serif;
+					opacity: 0.8;
+					font-size: 16px;
+					color: #E6E6E6;
+					list-style: none;
+					a { color: #FFF; text-decoration: none; border-bottom: 1px solid #494647; }
+					a:hover { border-bottom: 1px solid #FFF; }
+				}
+			}
+			.contact-info {
+				float: left;
+				margin-left: 150px;
+			}
+			.store-info {
+				float: right;
+				margin-right: 235px;
+			}
+		}
+	}
 
 
 

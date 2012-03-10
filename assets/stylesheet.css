@@ -125,7 +125,8 @@ body {
 #content .content-inner {
   width: 1000px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 #content ul.product-collection {
   padding: 70px 0; }
   #content ul.product-collection li {
@@ -212,3 +213,47 @@ body {
           -ms-transition: background-position 0.1s linear;
           -o-transition: background-position 0.1s linear;
           transition: background-position 0.1s linear; }
+
+/******************************************************************************/
+/* FOOTER */
+#footer {
+  height: 285px;
+  background: #2f292b url(bg-header.gif); }
+  #footer .content-inner {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background: url(bird-brown.gif) no-repeat center center;
+    overflow: hidden; }
+    #footer .content-inner .contact-info,
+    #footer .content-inner .store-info {
+      line-height: 1.5em;
+      padding: 60px 0 0 0; }
+      #footer .content-inner .contact-info h2,
+      #footer .content-inner .store-info h2 {
+        font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #9A9A9A;
+        margin: 0 0 15px 0; }
+      #footer .content-inner .contact-info ul,
+      #footer .content-inner .store-info ul {
+        font-family: "chaparral-pro", Georgia, Times, serif;
+        opacity: 0.8;
+        font-size: 16px;
+        color: #E6E6E6;
+        list-style: none; }
+        #footer .content-inner .contact-info ul a,
+        #footer .content-inner .store-info ul a {
+          color: #FFF;
+          text-decoration: none;
+          border-bottom: 1px solid #494647; }
+        #footer .content-inner .contact-info ul a:hover,
+        #footer .content-inner .store-info ul a:hover {
+          border-bottom: 1px solid #FFF; }
+    #footer .content-inner .contact-info {
+      float: left;
+      margin-left: 150px; }
+    #footer .content-inner .store-info {
+      float: right;
+      margin-right: 235px; }

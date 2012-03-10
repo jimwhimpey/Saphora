@@ -1,45 +1,26 @@
 <div id="footer">
 	
-	<div id="footer-content">
+	<div class="content-inner">
 		
-        <div class="copyright clearfix">
-
-        <p>
-        {% for link in linklists.footer.links %}
-
-          {{ link.title | link_to: link.url }} <span style="color:gray; padding:0 5px">|</span>{% endfor %} 
-
-          Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}.
-
-          {% if settings.include_shopifylink %}{{ powered_by_link }}{% endif %}
-        </p>
-
-      </div><!-- .clearfix -->
-
+		<div class="contact-info">
+			<h2>Contact Information</h2>
+			<ul>
+				<li>Phone: 07 6969 6969</li>
+				<li>Email: <a href="#">hello@saphora.com</a></li>
+				<li>Twitter: <a href="#">@saphoracycler</a></li>
+				<li>Facebook: <a href="#">Saphora Cycler</a></li>
+			</ul>
+		</div>
 		
-		{% if settings.enable_creditcards %}
-    <ul class="credit-cards">
-      {% if settings.show_visa %}
-      <li>{{ 'icon-visa.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_paypal %}
-      <li>{{ 'icon-paypal.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_discover %}
-      <li>{{ 'icon-discover.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_mastercard %}
-      <li>{{ 'icon-mastercard.png' | asset_url | img_tag }}</li>
-      {% endif %}
-
-      {% if settings.show_amex %}
-      <li>{{ 'icon-ae.png' | asset_url | img_tag }}</li>
-      {% endif %}
-    </ul>
-    {% endif %}
+		<div class="store-info">
+			<h2>Store Info</h2>
+			<ul>
+				{% for link in linklists.footer.links %}
+					<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		
 	</div>
 	
 </div>
