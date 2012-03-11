@@ -2,17 +2,17 @@
 	
 	<div class="content-inner">
 		
-		<div class="product-photos">
-			<ul> 
-				{% for image in product.images %}
-					{% if forloop.first %}
-				    <li>
-				    	<a href="{{ image | product_img_url: 'large' }}" ><img src="{{ image | product_img_url: 'large' }}" width="480" /></a>
-				    </li>
-			    {% else %}
-						<li><a href="{{ image | product_img_url: 'large' }}" class="fancybox" ><img  src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" /></a></li>
-			    {% endif %}
-		    {% endfor %} 
+		<div class="product-photos"> 
+			{% for image in product.images %}
+				{% if forloop.first %}
+			    <div class="main">
+			    	<a href="{{ image | product_img_url: 'original' }}" ><img src="{{ image | product_img_url: 'large' }}" width="480" /></a>
+			    </div>
+					<ul>
+		    {% else %}
+						<li><a href="{{ image | product_img_url: 'original' }}"><img src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" /></a></li>
+		    {% endif %}
+	    {% endfor %} 
 			</ul>
 		</div>
 			
