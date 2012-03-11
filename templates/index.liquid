@@ -12,9 +12,9 @@
 					</a>
 					<div class="product-details">
 						<h2 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h2>
-						<p class="product-description">{{ product.description | strip_html | truncate: 75, ' [...]' }} <a href="{{ product.url }}">More details &rarr;</a></p>
+						<p class="product-description">{{ product.description | strip_html | truncate: 90, ' [...]' }} <a href="{{ product.url }}">More details &rarr;</a></p>
 						<p class="product-price">${{ product.price | money_without_currency }}</p>
-						<p class="product-add"><a href="#">Add to Cart</a></p> 
+						<!--<p class="product-add"><a href="#">Add to Cart</a></p>-->
 					</div>
 				</li>
 		  {% endfor %}
