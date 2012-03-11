@@ -26,68 +26,20 @@
 		{% include 'header' %}
 
 		{% if template == "index" %}
+		
 			{{ content_for_layout }}
+			
 		{% endif %}
 
 		{% if template != "index" %}
-
-			<!--<div id="home-banner-content">
-				<h2 class="title">
-					{% case template %}
-					{% when "product" %}
-	          	{{ product.title }}
-	        	{% when "collection" %}
-	            {{ collection.title }}          
-	        	{% when "blog" %}
-	            {{ blog.title }}
-	        	{% when "page" %}
-	            {{ page.title }}
-	        	{% when "article" %}
-	            {{ blog.title }}
-	        	{% when "cart" %}
-	            Shopping Cart
-				{% when "404" %}
-		        Page Not Found
-				{% when "search" %}
-			    Search
-	        {% endcase %}
-				</h2>
-				
-				<ul class="breadcrumb">
-					<li><a href="/" title="Back to the frontpage">Home</a></li>
-					{% case template %}
-					<li class="current">
-					{% when "product" %}
-						{% if collection %}            
-	          	<li>{{ collection.title | link_to: collection.url }}</li>
-	          {% endif %}
-	          	<li class="no-arrow">{{ product.title | link_to: product.url }}</li>
-	        	{% when "collection" %}
-	            <li class="no-arrow">{{ collection.title | link_to: collection.url }} </li>         
-	        	{% when "blog" %}
-							<li class="no-arrow">{{ blog.title | link_to: blog.url }}</li>
-	        	{% when "page" %}
-	            <li class="no-arrow">{{ page.title | link_to: page.url }}</li>
-	        	{% when "article" %}
-	            <li class="no-arrow">{{ blog.title | link_to: blog.url }}</li>
-	        	{% when "cart" %}
-	            <li class="no-arrow"><a href="/cart">Shopping Cart</a></li>
-						{% when "search" %}
-		            <li class="no-arrow">Search</li>
-						{% when "404" %}
-				        <li class="no-arrow">Page not found</li>
-				        
-	        {% endcase %}
-					</li>
-				</ul>-->
 		
+			{% if template == 'list-collections' %}
+				{% include 'collection-listing' %}
+			{% else %}
 				{{ content_for_layout }}
+			{% endif %}
 				
-			{% endif %}	
-		
-			</div>
-			
-		</div>
+		{% endif %}	
 
 		{% include 'footer' %}
 

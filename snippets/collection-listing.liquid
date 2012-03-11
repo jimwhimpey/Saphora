@@ -1,0 +1,28 @@
+<div id="content" class="collection listing">
+	
+	<div class="content-inner">
+
+		<h2>Gear Collections</h2>
+		
+	  <ul>
+			{% for collection in collections %}
+				{% unless collection.handle == 'frontpage' %}
+					<li class="{{ collection.handle }}-collection{% cycle '', '', '', ' last-in-row' %}">
+						{% if collection.image %}
+							<div class="collection-image">
+	          		<a href="{{ collection.url }}" title="Browse our {{ collection_title }} collection">
+	            		{{ collection.image.src | collection_img_url: 'medium' | img_tag: collection_title }}{% else %}
+									{{ collection.products.first.featured_image | product_img_url: 'medium' | img_tag: collection_title }}
+								</a>
+							</div>
+						{% endif %}
+						<div class="collection-description">
+							<h3><a href="{{ collection.url }}">{{ collection.title }}</a></h3>
+						</div>
+					</li>
+				{% endunless %}
+	  {% endfor %}
+	
+	</div>
+	
+</div>
