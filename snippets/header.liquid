@@ -24,7 +24,7 @@
 		      	0 items
 		    	{% endif %}
 				</a></span>
-				{% if cart.item_count == 0 %}
+				{% if cart.item_count > 0 %}
 					<span class="toolbar-checkout"> &mdash; <a href="/checkout">Checkout</a></span>
 				{% endif %}
 				
