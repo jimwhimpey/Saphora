@@ -406,6 +406,12 @@
 		.checkout {
 			width: 700px;
 			text-align: right;
+			a.checkout-button {
+				@include button(#FFF, #5bb75b, #62c462, #51a351, #387038);
+				font-size: 20px;
+				margin: 0 0 20px 0;
+				padding: 8px 20px;
+			}
 		}
 	}
 
