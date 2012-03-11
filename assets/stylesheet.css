@@ -103,7 +103,7 @@ body {
     padding: 90px 0 0 0;
     background: url(dirtygirl.jpg) no-repeat top right; }
     .banner .content-inner h2, .banner .content-inner p {
-      width: 440px;
+      width: 460px;
       text-align: center;
       color: #0E2A2E; }
     .banner .content-inner h2 {
@@ -290,6 +290,14 @@ body {
       font-weight: bold; }
     .page .content-inner .entry em {
       font-style: italic; }
+    .page .content-inner .entry h3 {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.3em;
+      margin: 20px 0 10px 0;
+      padding: 10px 0 0 0;
+      border-top: 1px solid #EEE; }
 
 /******************************************************************************/
 /* PRODUCT PAGE */
@@ -365,7 +373,7 @@ body {
       font-size: 18px;
       margin: 0 0 15px 0; }
       .product-page .product-content .add-to-cart .options select {
-        font-size: 24px; }
+        font-size: 16px; }
     .product-page .product-content .add-to-cart p.product-price-add {
       font-size: 42px;
       margin: 0 0 15px 0; }
@@ -455,6 +463,8 @@ body {
       border-bottom: 1px solid #F9DCE9; }
       .cart table td a:hover {
         border-bottom: 1px solid #D095B8; }
+    .cart table td.pic a {
+      border-bottom: none; }
   .cart table tr.total td {
     border-bottom: 1px solid #666; }
   .cart table tr.total td.padding-row {

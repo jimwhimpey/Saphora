@@ -155,7 +155,7 @@
 			padding: 90px 0 0 0;
 			background: url(dirtygirl.jpg) no-repeat top right;
 			h2, p {
-				width: 440px;
+				width: 460px;
 				text-align: center;
 				color: #0E2A2E;
 			}
@@ -298,6 +298,15 @@
 				a { @include bodylinks; }
 				strong { font-weight: bold; }
 				em { font-style: italic; }
+				h3 {
+					text-transform: uppercase;
+					font-size: 20px;
+					font-weight: bold;
+					letter-spacing: 0.3em;
+					margin: 20px 0 10px 0;
+					padding: 10px 0 0 0;
+					border-top: 1px solid #EEE;
+				}
 			}
 		}
 	}
@@ -382,7 +391,7 @@
 				.options {
 					font-size: 18px;
 					margin: 0 0 15px 0;
-					select { font-size: 24px ; }
+					select { font-size: 16px ; }
 				}
 				p.product-price-add {
 					font-size: 42px;
@@ -429,6 +438,7 @@
 					text-align: center;
 				}
 				a { @include bodylinks; }
+				&.pic a { border-bottom: none; }
 			}
 			tr.total {
 				td { border-bottom: 1px solid #666; }
