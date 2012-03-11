@@ -145,13 +145,13 @@ body {
     #content ul.product-collection li div.product-details {
       float: right;
       width: 245px; }
-      #content ul.product-collection li div.product-details h2.product-name {
+      #content ul.product-collection li div.product-details h3.product-name {
         font-family: "Din Display Pro", Helvetica, Arial, sans-serif;
         font-size: 16px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         margin: 30px 0 10px 0; }
-        #content ul.product-collection li div.product-details h2.product-name a {
+        #content ul.product-collection li div.product-details h3.product-name a {
           color: #0E2A2E;
           text-decoration: none; }
       #content ul.product-collection li div.product-details p.product-description,
@@ -216,6 +216,25 @@ body {
           -ms-transition: background-position 0.1s linear;
           -o-transition: background-position 0.1s linear;
           transition: background-position 0.1s linear; }
+
+/******************************************************************************/
+/* COLLECTION PAGES */
+.collection .content-inner {
+  padding-top: 70px; }
+  .collection .content-inner h2 {
+    font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #72D4E2;
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    text-align: center; }
+    .collection .content-inner h2 a {
+      color: #D095B8;
+      text-decoration: none;
+      border-bottom: 1px solid #F9DCE9; }
+      .collection .content-inner h2 a:hover {
+        border-bottom: 1px solid #D095B8; }
 
 /******************************************************************************/
 /* REGULAR PAGES */

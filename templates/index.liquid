@@ -11,7 +11,7 @@
 						<img src="{{ product.images.first | product_img_url: 'medium' }}" width="220px" alt="{{ product.title | escape }}" />
 					</a>
 					<div class="product-details">
-						<h2 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h2>
+						<h3 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h3>
 						<p class="product-description">{{ product.description | strip_html | truncate: 90, ' [...]' }} <a href="{{ product.url }}">More details &rarr;</a></p>
 						<p class="product-price">${{ product.price | money_without_currency }}</p>
 						<!--<p class="product-add"><a href="#">Add to Cart</a></p>-->
@@ -23,6 +23,3 @@
 	</div>
 	
 </div>
-<!--end content-wrapper-->
-
-

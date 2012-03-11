@@ -1,55 +1,37 @@
-{% paginate collection.products by 16 %}
+<div id="content" class="collection">
+	
+	<div class="content-inner">
 
-<div id="featured-products">
-	
-	<h3 class="featured-products-title">{{ collection.title }}</h3>
-	
-	{% if settings.product_tags %}
-	    {% if collection.all_tags and collection.all_tags.size != 0 %}
-        <ul class="product-tag">
-	       <li class="product-tag-title">Product Tags:</li>
-	       {% for tag in collection.all_tags %}
-	       <li class="product-tag-item">{{ tag | link_to_tag: tag }}</li>
-           {% endfor %}
-	    </ul>
-	    {% endif %}
-	{% endif %}
-	
-	{% if collection.description %}
-	<div id="catalog-description">
-		<p>{{ collection.description }}</p>
-	</div>
-	{% endif %}
-	
-	{% if collection.products.size == 0 %}
-		<strong>No products found in this collection.</strong>
+		<h2><a href="/">Gear</a> &rarr; {{ collection.title }}</h2>
+		
+		{% if collection.description %}
+			<p class="collection-description">{{ collection.description }}</p>
+		{% endif %}
+		
+		{% if collection.products.size == 0 %}
+		
+			<p class="collection-empty">No products found in this collection.</p>
+			
 		{% else %}		
 
-		<table cellpadding="0" cellspacing="0">
-
-  		{% tablerow product in collection.products cols: 4 %}      
-  			<ul class="featured-product">
+			<ul class="product-collection">		
+			  {% for product in collection.products %}
 			    <li>
-                    <a href="{{ product.url | within: collection }}">
-                        <span class="product-image-wrapper"><img class="product-image cy" src="{{ product.images.first | product_img_url: 'medium' }}" width="170px" alt="{{ product.title | escape }}" /></span>
-                        <span class="product-name">{{ product.title }}</span>
-                        <span class="featured-price">{% if product.compare_at_price_max > product.price %}<em>was {{ product.compare_at_price_max | money }}</em>{% endif %}<strong>{{ product.price  | money }}</strong></span><br /><span class="small button details">DETAILS</span>
-                    </a>
-                </li>
-			  </ul>
-  		{% endtablerow %}
-
-		</table>
+						<a href="{{ product.url }}" class="product-image">
+							<img src="{{ product.images.first | product_img_url: 'medium' }}" width="220px" alt="{{ product.title | escape }}" />
+						</a>
+						<div class="product-details">
+							<h3 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+							<p class="product-description">{{ product.description | strip_html | truncate: 90, ' [...]' }} <a href="{{ product.url }}">More details &rarr;</a></p>
+							<p class="product-price">${{ product.price | money_without_currency }}</p>
+							<!--<p class="product-add"><a href="#">Add to Cart</a></p>-->
+						</div>
+					</li>
+			  {% endfor %}
+			</ul>
+			
+		{% endif %}	
 	
-			{% if paginate.pages > 1 %}
-  		<div id="pagination">
-  			<ul>
-  				<li>{{ paginate | default_pagination }}</li>
-  			</ul>
-  		</div>
-			{% endif %}
-
-	{% endif %}
-
+	</div>
+	
 </div>
-{% endpaginate %}
