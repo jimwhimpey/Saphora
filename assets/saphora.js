@@ -19,5 +19,8 @@ $(function(){
 		$("form").submit();
 		return false;
 	});
+	
+	// For IE, fix the floating products
+	$("ul.product-collection li:nth-child(2n)").css({"float": "right", "clear": "none"});	
 
 });
