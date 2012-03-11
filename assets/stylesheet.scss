@@ -227,18 +227,88 @@
 /******************************************************************************/
 /* PRODUCT PAGE */
 
+	$stockborder: 1px solid #CCC;
+
 	.product-page {
 		.content-inner { 
 			@include content-inner;
 			overflow: hidden;	
-			}
+			padding: 70px 0;
+		}
 		.product-photos {
 			width: 480px;
 			float: left;
 		}
+		.product-content {
+			width: 495px;
+			float: right;
+			overflow: hidden;
+			@include serif;
+			font-size: 18px;
+			line-height: 1.3em;
+			h2 {
+				@include headings;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				font-size: 28px;
+				margin: 0 0 20px 0;
+			}
+			.description {
+				margin: 0 0 20px 0;
+				p { margin: 0 0 8px 0; }
+				ul { 
+					list-style: square;
+					color: #6E7F82;
+					margin-left: 20px;
+				}
+			}
+			.stock-levels {
+				margin: 0 0 20px 0;
+				h3 {
+					text-transform: uppercase;
+					font-size: 15px;
+					letter-spacing: 0.2em;
+				}
+				table {
+					font-size: 15px;
+					width: 180px;
+					border-top: $stockborder;
+					border-left: $stockborder;
+					td {
+						color: #78888A;
+						padding: 3px 10px;
+						border-bottom: $stockborder;
+						border-right: $stockborder;
+						&.stock-title { background: #F6F7F7; }
+					}
+				}
+			}
+			.add-to-cart {
+				margin: 0 0 70px 0;
+				.options {
+					font-size: 18px;
+					margin: 0 0 15px 0;
+					select { font-size: 24px ; }
+				}
+				p.product-price-add {
+					font-size: 42px;
+					margin: 0 0 15px 0;
+					a {
+						@include button(#FFF, #5bb75b, #62c462, #51a351, #387038);
+						top: -3px;
+						font-size: 20px;
+						padding: 8px 20px;
+						position: relative;
+						top: -5px;
+					}
+				}
+			}
+		}
+		.see-more {
+			a { color: #D095B8; text-decoration: none; }
+			a:hover { color: #000; }
+		}
 	}
-
-	
 
 
 /******************************************************************************/
@@ -272,13 +342,10 @@
 					a:hover { border-bottom: 1px solid #FFF; }
 				}
 			}
-			.contact-info {
-				float: left;
-				margin-left: 150px;
-			}
+			.contact-info { float: left; }
 			.store-info {
 				float: right;
-				margin-right: 235px;
+				text-align: right;
 			}
 		}
 	}

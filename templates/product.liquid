@@ -18,43 +18,66 @@
 			
 		<div class="product-content">
 			
-				<h2>{{ product.title | escape }}</h2<>
+				<h2>{{ product.title | escape }}</h2>
 				
-			  {% if product.variants.size > 1 and product.options.size == 1  %}  
-					
-				  <form action="/cart/add" method="post">
-				    <div id="product-variants">
-				      <div class="selector-wrapper clearfix"> 
-				        <label class="product-options">{{ product.options[0] }}</label>
-				        <ul>
-				          {% for variant in product.variants %}
-				          <li>
-				            <input type="radio" class="radio-button" data-price="{{ variant.price | money }}" id="{{ variant.id }}" value="{{ variant.id }}" name="id" {% if forloop.first %} checked {% endif %} >
-				            <label class="radio-title" for="{{ variant.id }}">{{ variant.title }}</label>
-				          </li>
-				          {% endfor %}
-				        </ul>
-				      </div> 
-				    </div>
-						<div class="current-price">{{ variant.price | money }}</div>
-						<input type="submit" class="large button main" name="add" value="Add to Shopping Cart" id="purchase" />
-				  </form>
-
-			  {% else %}  
+				<div class="description">
+					<p>{{ product.description }}</p>
+				</div>
 				
-				  <form action="/cart/add" method="post">
-					  <div id="product-variants">
-				    </div><!-- product variants -->  
-				    <input  type="hidden" id="{{ variant.id }}" name="id" value="{{ product.variants[0].id }}" />
-						<div class="current-price">{{ product.price | money_with_currency }}</div>
-						<input type="submit" class="large button main" name="add" value="Add to Shopping Cart" id="purchase" />
-				  </form>
-					
-			  {% endif %}
+				<div class="stock-levels">
+					<h3>Stock levels</h3>
+					<table border="0" cellspacing="0" cellpadding="0">
+						{% for variant in product.variants %}
+							<tr>
+								<td class="stock-title">{{ variant.title }}</td>
+								<td class="stock-quantity">
+									{% if variant.inventory_quantity == 1 %}
+										One left!
+									{% elsif variant.inventory_quantity < 5 %}
+										Low
+									{% elsif variant.inventory_quantity < 10 %}
+										Good
+									{% elsif variant.inventory_quantity >= 10 %}
+										Heaps
+									{% endif %}	
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+				
+				<form action="/cart/add" method="post" class="add-to-cart">
+				
+					<div class="options">
+						
+						<p>
+								<label for="size">Size: </label>
+								<select name="id" id="size">
+									{% for variant in product.variants %}
+										{{ variant.id }}
+										<option value="{{ variant.id }}">{{ variant.title }}</option>
+									{% endfor %}
+								</select> 
+								<label for="quantity">Quantity: </label>
+								<select name="quantity" id="quantity">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+						</p>
+						
+					</div>
+								
+					<p class="product-price-add">
+						${{ product.price | money_without_currency }}
+						<a href="#">Add to Cart</a>
+					</p> 
 	
-				<p>{{ product.description }} </p>
+				</form>
 	
-				<div class="see-more"><p>&lsaquo; See more {{ product.type | link_to_type }}. </p></div>			
+				<div class="see-more"><p>More {{ product.type | link_to_type }} &rarr;</p></div>			
 			
 		</div>
 		
