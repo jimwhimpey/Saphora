@@ -226,23 +226,25 @@ body {
   padding: 70px 0; }
 .product-page .product-photos {
   width: 480px;
-  float: left; }
+  float: left;
+  text-align: center; }
   .product-page .product-photos .main {
     margin: 0 0 20px 0; }
   .product-page .product-photos ul {
-    width: 324px;
+    max-width: 324px;
     margin: 0 auto;
-    padding: 8px 0 5px 8px;
+    padding: 8px 0 0 8px;
     list-style: none;
     border: 1px solid #CCC;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     background: #EEE;
-    overflow: hidden; }
+    overflow: hidden;
+    display: inline-block; }
     .product-page .product-photos ul li {
       float: left;
-      margin: 0 8px 0 0; }
+      margin: 0 8px 5px 0; }
 .product-page .product-content {
   width: 495px;
   float: right;
