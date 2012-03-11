@@ -263,8 +263,11 @@ body {
       list-style: square;
       margin: 0 0 15px 30px; }
     .page .content-inner .entry a {
-      color: #0E2A2E;
-      text-decoration: none; }
+      color: #D095B8;
+      text-decoration: none;
+      border-bottom: 1px solid #F9DCE9; }
+      .page .content-inner .entry a:hover {
+        border-bottom: 1px solid #D095B8; }
     .page .content-inner .entry strong {
       font-weight: bold; }
     .page .content-inner .entry em {

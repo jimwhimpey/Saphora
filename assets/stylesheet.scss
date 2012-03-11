@@ -284,7 +284,7 @@
 					list-style: square;
 					margin: 0 0 15px 30px;
 				}
-				a { color: #0E2A2E; text-decoration: none; }
+				a { @include bodylinks; }
 				strong { font-weight: bold; }
 				em { font-style: italic; }
 			}
