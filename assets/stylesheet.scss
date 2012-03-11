@@ -5,9 +5,14 @@
 
 
 /******************************************************************************/
-/* SASS HELPER */
+/* SASS HELPERS */
 
-	@mixin headings { font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif; }
+	@mixin headings { 
+		font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+		text-transform: uppercase;	
+		letter-spacing: 0.2em;
+		}
+		
 	@mixin sans { font-family: "Din Display Pro", Helvetica, Arial, sans-serif; }
 	@mixin serif { font-family: "chaparral-pro", Georgia, Times, serif; }
 
@@ -35,7 +40,6 @@
 	@mixin button($color, $background, $gradientTop, $gradientBottom, $borderBottom) {
 		@include headings;
 		text-decoration: none;
-		text-transform: uppercase;
 		letter-spacing: 0.2em;
 	  display: inline-block;
 	  padding: 4px 10px 4px;
@@ -114,8 +118,6 @@
 			position: absolute;
 			top: 73px;
 			left: 250px;
-			text-transform: uppercase;
-			letter-spacing: 0.2em;
 			li {
 				float: left;
 				font-size: 14px;
@@ -128,9 +130,7 @@
 		.cart {
 			@include headings;
 			color: #FFF;
-			text-transform: uppercase;
 			text-align: right;
-			letter-spacing: 0.2em;
 			font-size: 14px;
 			position: absolute;
 			top: 73px;
@@ -162,8 +162,6 @@
 			h2 {
 				@include headings;
 				font-size: 34px;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
 				padding: 70px 0 0 0;
 				margin: 0 0 20px 0;
 				background: url(bird-blue.gif) no-repeat top center;
@@ -244,8 +242,6 @@
 			padding-top: 70px;
 			h2 {
 				@include headings;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
 				color: #72D4E2;
 				font-size: 34px;
 				margin: 0 0 20px 0;
@@ -269,8 +265,6 @@
 			font-size: 19px;
 			h2 {
 				@include headings;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
 				color: #72D4E2;
 				font-size: 34px;
 				margin: 0 0 20px 0;
@@ -333,8 +327,6 @@
 			line-height: 1.3em;
 			h2 {
 				@include headings;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
 				font-size: 28px;
 				margin: 0 0 20px 0;
 			}
@@ -467,8 +459,6 @@
 				padding: 60px 0 0 0;
 				h2 {
 					@include headings;
-					text-transform: uppercase;
-					letter-spacing: 0.1em;
 					color: #9A9A9A;
 					margin: 0 0 15px 0;
 				}

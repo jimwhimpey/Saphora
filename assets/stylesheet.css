@@ -28,7 +28,7 @@ table {
   border-spacing: 0; }
 
 /******************************************************************************/
-/* SASS HELPER */
+/* SASS HELPERS */
 /******************************************************************************/
 /* SITE WIDE STUFF */
 body {
@@ -57,11 +57,11 @@ body {
       background: url(logo.gif); }
   .header ul.navigation {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     position: absolute;
     top: 73px;
-    left: 250px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em; }
+    left: 250px; }
     .header ul.navigation li {
       float: left;
       font-size: 14px;
@@ -74,10 +74,10 @@ body {
         color: #79E1F0; }
   .header .cart {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-    color: #FFF;
     text-transform: uppercase;
-    text-align: right;
     letter-spacing: 0.2em;
+    color: #FFF;
+    text-align: right;
     font-size: 14px;
     position: absolute;
     top: 73px;
@@ -108,9 +108,9 @@ body {
       color: #0E2A2E; }
     .banner .content-inner h2 {
       font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-      font-size: 34px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.2em;
+      font-size: 34px;
       padding: 70px 0 0 0;
       margin: 0 0 20px 0;
       background: url(bird-blue.gif) no-repeat top center; }
@@ -173,8 +173,9 @@ body {
         margin: 0 0 20px 0; }
       #content ul.product-collection li div.product-details p.product-add a {
         font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-        text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 0.2em;
+        text-decoration: none;
         letter-spacing: 0.2em;
         display: inline-block;
         padding: 4px 10px 4px;
@@ -224,7 +225,7 @@ body {
   .collection .content-inner h2 {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     color: #72D4E2;
     font-size: 34px;
     margin: 0 0 20px 0;
@@ -249,7 +250,7 @@ body {
   .page .content-inner h2 {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     color: #72D4E2;
     font-size: 34px;
     margin: 0 0 20px 0; }
@@ -312,7 +313,7 @@ body {
   .product-page .product-content h2 {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     font-size: 28px;
     margin: 0 0 20px 0; }
   .product-page .product-content .description {
@@ -353,8 +354,9 @@ body {
       margin: 0 0 15px 0; }
       .product-page .product-content .add-to-cart p.product-price-add a {
         font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-        text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 0.2em;
+        text-decoration: none;
         letter-spacing: 0.2em;
         display: inline-block;
         padding: 4px 10px 4px;
@@ -442,8 +444,9 @@ body {
     border-bottom: none; }
   .cart table tr.total td.quantity a {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-    text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
     letter-spacing: 0.2em;
     display: inline-block;
     padding: 4px 10px 4px;
@@ -491,8 +494,9 @@ body {
   text-align: right; }
   .cart .checkout a.checkout-button {
     font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
-    text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
     letter-spacing: 0.2em;
     display: inline-block;
     padding: 4px 10px 4px;
@@ -566,7 +570,7 @@ body {
       #footer .content-inner .store-info h2 {
         font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.2em;
         color: #9A9A9A;
         margin: 0 0 15px 0; }
       #footer .content-inner .contact-info ul,
