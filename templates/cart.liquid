@@ -33,7 +33,7 @@
 					<tr class="total">
 						<td colspan="3" class="padding-row">&nbsp;</td>
 						<td class="quantity">
-							<input type="submit" class="large button secondary" alt="Update" name="update" class="update" value="Update" />
+							<a href="#">Update</a>
 						</td>
 						<td class="grand-total-label">Grand total:</td>
 						<td class="grand-total">{{ cart.total_price | money }}</td>
@@ -49,13 +49,8 @@
 		    	{% endif %}
 		
 					<div class="checkout">
-						<a class="checkout-button" name="checkout">Checkout &rarr;</a>
-						<!--<input type="submit" class="large button main" alt="Checkout" name="checkout" value="Checkout"/>-->
-						<div class="additional-checkout-buttons">
-							{% if additional_checkout_buttons %}
-								{{ content_for_additional_checkout_buttons | google_button_options: 'transparent' }}
-							{% endif %}
-						</div>
+						<a class="checkout-button" name="checkout" href="#">Checkout &rarr;</a>
+						<p class="checkout-info">With PayPal, no need for an account.</p>
 					</div>
 		
 				</div>
@@ -64,7 +59,7 @@
 
 		{% else %}
 		
-			<p id="empty">Your shopping cart is empty. <a href="/collections/all">Continue shopping...</a></p>
+			<p class="empty">Your shopping cart is empty. <a href="/">Fill it with gear &rarr;</a></p>
 			
 		{% endif %}	
 	

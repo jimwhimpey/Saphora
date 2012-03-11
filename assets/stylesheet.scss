@@ -46,7 +46,7 @@
 	  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	  *margin-left: .3em;
 	  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	  color: #ffffff;
+	  color: $color;
 	  background-color: $background;
 	  background-image: -moz-linear-gradient(top, $gradientTop, $gradientBottom);
 	  background-image: -ms-linear-gradient(top, $gradientTop, $gradientBottom);
@@ -401,6 +401,10 @@
 			tr.total {
 				td { border-bottom: 1px solid #666; }
 				td.padding-row { border-bottom: none; }
+				td.quantity a { 
+					@include button(#333, #f5f5f5, #ffffff, #e6e6e6, #bfbfbf);
+					text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+				}
 			}
 		}
 		.checkout {
@@ -412,6 +416,14 @@
 				margin: 0 0 20px 0;
 				padding: 8px 20px;
 			}
+			.checkout-info {
+				font-size: 14px;
+				color: #CCC;
+			}
+		}
+		.empty {
+			a { color: #ECA0C1; text-decoration: none; border-bottom: 1px solid #F5CFE0; }
+			a:hover { border-bottom: 1px solid #D095B8; }
 		}
 	}
 
