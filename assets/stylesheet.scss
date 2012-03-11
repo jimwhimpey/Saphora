@@ -248,6 +248,23 @@
 				text-align: center;
 				a { @include bodylinks; }
 			}
+			.collection-description {
+				@include serif;
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+	}
+	
+	.listing {
+		.content-inner { 
+			padding: 70px 0;
+			ul {
+				@include serif;
+				font-size: 20px;
+				text-align: center;
+				a { @include bodylinks; }
+			}
 		}
 	}
 

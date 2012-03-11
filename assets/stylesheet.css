@@ -236,6 +236,23 @@ body {
       border-bottom: 1px solid #F9DCE9; }
       .collection .content-inner h2 a:hover {
         border-bottom: 1px solid #D095B8; }
+  .collection .content-inner .collection-description {
+    font-family: "chaparral-pro", Georgia, Times, serif;
+    font-size: 20px;
+    text-align: center; }
+
+.listing .content-inner {
+  padding: 70px 0; }
+  .listing .content-inner ul {
+    font-family: "chaparral-pro", Georgia, Times, serif;
+    font-size: 20px;
+    text-align: center; }
+    .listing .content-inner ul a {
+      color: #D095B8;
+      text-decoration: none;
+      border-bottom: 1px solid #F9DCE9; }
+      .listing .content-inner ul a:hover {
+        border-bottom: 1px solid #D095B8; }
 
 /******************************************************************************/
 /* REGULAR PAGES */
