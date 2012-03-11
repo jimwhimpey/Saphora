@@ -180,7 +180,11 @@
 				overflow: hidden;
 				margin: 0 0 70px 0;
 				float: left;
-				&:nth-child(2n) { float: right; }
+				clear: both;
+				&:nth-child(2n) { 
+					float: right;
+					clear: none;	
+					}
 				a.product-image {
 					width: 220px;
 					float: left;
@@ -218,6 +222,23 @@
 			}
 		}
 	}
+	
+	
+/******************************************************************************/
+/* PRODUCT PAGE */
+
+	.product-page {
+		.content-inner { 
+			@include content-inner;
+			overflow: hidden;	
+			}
+		.product-photos {
+			width: 480px;
+			float: left;
+		}
+	}
+
+	
 
 
 /******************************************************************************/

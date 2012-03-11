@@ -133,9 +133,11 @@ body {
     width: 490px;
     overflow: hidden;
     margin: 0 0 70px 0;
-    float: left; }
+    float: left;
+    clear: both; }
     #content ul.product-collection li:nth-child(2n) {
-      float: right; }
+      float: right;
+      clear: none; }
     #content ul.product-collection li a.product-image {
       width: 220px;
       float: left;
@@ -213,6 +215,17 @@ body {
           -ms-transition: background-position 0.1s linear;
           -o-transition: background-position 0.1s linear;
           transition: background-position 0.1s linear; }
+
+/******************************************************************************/
+/* PRODUCT PAGE */
+.product-page .content-inner {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+.product-page .product-photos {
+  width: 480px;
+  float: left; }
 
 /******************************************************************************/
 /* FOOTER */
