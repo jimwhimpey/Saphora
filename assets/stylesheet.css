@@ -217,6 +217,43 @@ body {
           transition: background-position 0.1s linear; }
 
 /******************************************************************************/
+/* REGULAR PAGES */
+.page .content-inner {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+  font-family: "chaparral-pro", Georgia, Times, serif;
+  font-size: 19px; }
+  .page .content-inner h2 {
+    font-family: "Din Display Pro Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #72D4E2;
+    font-size: 34px;
+    margin: 0 0 20px 0; }
+  .page .content-inner .entry {
+    width: 700px;
+    float: left;
+    line-height: 1.4em; }
+    .page .content-inner .entry p {
+      margin: 0 0 15px 0; }
+    .page .content-inner .entry ul {
+      list-style: square;
+      margin: 0 0 15px 30px; }
+    .page .content-inner .entry a {
+      color: #5BAAB5;
+      text-decoration: none;
+      border-bottom: 1px solid #72D4E2; }
+    .page .content-inner .entry a:hover {
+      color: #000; }
+    .page .content-inner .entry strong {
+      font-weight: bold; }
+    .page .content-inner .entry em {
+      font-style: italic; }
+
+/******************************************************************************/
 /* PRODUCT PAGE */
 .product-page .content-inner {
   width: 1000px;

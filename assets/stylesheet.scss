@@ -228,6 +228,42 @@
 			}
 		}
 	}
+
+
+/******************************************************************************/
+/* REGULAR PAGES */
+
+	.page {
+		.content-inner { 
+			@include content-inner;
+			overflow: hidden;	
+			padding: 70px 0;
+			@include serif;
+			font-size: 19px;
+			h2 {
+				@include headings;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #72D4E2;
+				font-size: 34px;
+				margin: 0 0 20px 0;
+			}
+			.entry {
+				width: 700px;
+				float: left;
+				line-height: 1.4em;
+				p { margin: 0 0 15px 0; }
+				ul {
+					list-style: square;
+					margin: 0 0 15px 30px;
+				}
+				a { color: #5BAAB5; text-decoration: none; border-bottom: 1px solid #72D4E2; }
+				a:hover { color: #000; }
+				strong { font-weight: bold; }
+				em { font-style: italic; }
+			}
+		}
+	}
 	
 	
 /******************************************************************************/
