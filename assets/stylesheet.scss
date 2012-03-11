@@ -23,6 +23,15 @@
 		border-radius: $radius;
 	}
 	
+	@mixin bodylinks {
+		color: #D095B8;
+		text-decoration: none;
+		border-bottom: 1px solid #F9DCE9;
+		&:hover {
+			border-bottom: 1px solid #D095B8;
+		}
+	}
+	
 	@mixin button($color, $background, $gradientTop, $gradientBottom, $borderBottom) {
 		@include headings;
 		text-decoration: none;
@@ -75,9 +84,7 @@
 /******************************************************************************/
 /* SITE WIDE STUFF */
 
-	body {
-		background: url(bg-page.gif);
-		}
+	body { background: url(bg-page.gif); }
 
 
 /******************************************************************************/
@@ -172,7 +179,7 @@
 
 
 /******************************************************************************/
-/* MAIN CONTENT AREA */
+/* HOMEPAGE */
 
 	#content {
 		.content-inner { 
@@ -190,7 +197,7 @@
 				&:nth-child(2n) { 
 					float: right;
 					clear: none;	
-					}
+				}
 				a.product-image {
 					width: 220px;
 					float: left;
@@ -214,8 +221,7 @@
 						line-height: 1.6em;
 						color: #0E2A2E;
 						margin: 0 0 10px 0;
-						a { color: #D095B8; text-decoration: none; }
-						a:hover { color: #000; }
+						a { @include bodylinks; }
 					}
 					p.product-price {
 						font-size: 30px;
@@ -257,8 +263,7 @@
 					list-style: square;
 					margin: 0 0 15px 30px;
 				}
-				a { color: #5BAAB5; text-decoration: none; border-bottom: 1px solid #72D4E2; }
-				a:hover { color: #000; }
+				a { color: #0E2A2E; text-decoration: none; }
 				strong { font-weight: bold; }
 				em { font-style: italic; }
 			}
@@ -363,10 +368,7 @@
 				}
 			}
 		}
-		.see-more {
-			a { color: #D095B8; text-decoration: none; }
-			a:hover { color: #000; }
-		}
+		.see-more a { @include bodylinks; }
 	}
 
 
@@ -396,7 +398,7 @@
 					padding: 5px;
 					text-align: center;
 				}
-				a { color: #D095B8; text-decoration: none; }
+				a { @include bodylinks; }
 			}
 			tr.total {
 				td { border-bottom: 1px solid #666; }
@@ -422,8 +424,7 @@
 			}
 		}
 		.empty {
-			a { color: #ECA0C1; text-decoration: none; border-bottom: 1px solid #F5CFE0; }
-			a:hover { border-bottom: 1px solid #D095B8; }
+			a { @include bodylinks; }
 		}
 	}
 

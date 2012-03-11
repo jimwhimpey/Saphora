@@ -121,7 +121,7 @@ body {
       color: #234F55; }
 
 /******************************************************************************/
-/* MAIN CONTENT AREA */
+/* HOMEPAGE */
 #content .content-inner {
   width: 1000px;
   margin: 0 auto;
@@ -164,9 +164,10 @@ body {
         margin: 0 0 10px 0; }
         #content ul.product-collection li div.product-details p.product-description a {
           color: #D095B8;
-          text-decoration: none; }
-        #content ul.product-collection li div.product-details p.product-description a:hover {
-          color: #000; }
+          text-decoration: none;
+          border-bottom: 1px solid #F9DCE9; }
+          #content ul.product-collection li div.product-details p.product-description a:hover {
+            border-bottom: 1px solid #D095B8; }
       #content ul.product-collection li div.product-details p.product-price {
         font-size: 30px;
         margin: 0 0 20px 0; }
@@ -243,11 +244,8 @@ body {
       list-style: square;
       margin: 0 0 15px 30px; }
     .page .content-inner .entry a {
-      color: #5BAAB5;
-      text-decoration: none;
-      border-bottom: 1px solid #72D4E2; }
-    .page .content-inner .entry a:hover {
-      color: #000; }
+      color: #0E2A2E;
+      text-decoration: none; }
     .page .content-inner .entry strong {
       font-weight: bold; }
     .page .content-inner .entry em {
@@ -383,9 +381,10 @@ body {
           transition: background-position 0.1s linear; }
 .product-page .see-more a {
   color: #D095B8;
-  text-decoration: none; }
-.product-page .see-more a:hover {
-  color: #000; }
+  text-decoration: none;
+  border-bottom: 1px solid #F9DCE9; }
+  .product-page .see-more a:hover {
+    border-bottom: 1px solid #D095B8; }
 
 /******************************************************************************/
 /* CART */
@@ -411,7 +410,10 @@ body {
       text-align: center; }
     .cart table td a {
       color: #D095B8;
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: 1px solid #F9DCE9; }
+      .cart table td a:hover {
+        border-bottom: 1px solid #D095B8; }
   .cart table tr.total td {
     border-bottom: 1px solid #666; }
   .cart table tr.total td.padding-row {
@@ -517,11 +519,11 @@ body {
     font-size: 14px;
     color: #CCC; }
 .cart .empty a {
-  color: #ECA0C1;
+  color: #D095B8;
   text-decoration: none;
-  border-bottom: 1px solid #F5CFE0; }
-.cart .empty a:hover {
-  border-bottom: 1px solid #D095B8; }
+  border-bottom: 1px solid #F9DCE9; }
+  .cart .empty a:hover {
+    border-bottom: 1px solid #D095B8; }
 
 /******************************************************************************/
 /* FOOTER */
