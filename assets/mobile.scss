@@ -118,6 +118,33 @@
 		}
 	}
 	
+	.page {
+		.content-inner { 
+			width: 90%;
+			padding: 0 5%;
+			padding: 20pt 0;
+			font-size: 14pt;
+			h2 {
+				font-size: 22pt;
+				margin: 0 0 10pt 0;
+			}
+			.entry {
+				width: 100%;
+				float: none;
+				p { margin: 0 0 10pt 0; }
+				ul {
+					margin: 0 0 10pt 30pt;
+				}
+				h3 {
+					font-size: 16pt;
+					margin: 15pt 0 8pt 0;
+					padding: 8pt 0 0 0;
+				}
+			}
+		}
+	}
+	
+	
 	
 	#footer {
 		height: auto;

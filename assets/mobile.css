@@ -93,6 +93,26 @@
         margin: 15pt 0 0 0;
         top: 0; }
 
+  .page .content-inner {
+    width: 90%;
+    padding: 0 5%;
+    padding: 20pt 0;
+    font-size: 14pt; }
+    .page .content-inner h2 {
+      font-size: 22pt;
+      margin: 0 0 10pt 0; }
+    .page .content-inner .entry {
+      width: 100%;
+      float: none; }
+      .page .content-inner .entry p {
+        margin: 0 0 10pt 0; }
+      .page .content-inner .entry ul {
+        margin: 0 0 10pt 30pt; }
+      .page .content-inner .entry h3 {
+        font-size: 16pt;
+        margin: 15pt 0 8pt 0;
+        padding: 8pt 0 0 0; }
+
   #footer {
     height: auto; }
     #footer .content-inner {
