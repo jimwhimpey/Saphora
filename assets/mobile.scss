@@ -146,6 +146,41 @@
 	
 	
 	
+	.cart {
+		.content-inner { 
+			width: 90%;
+			padding: 0 5%;
+			padding: 20pt 0;
+		}
+		table {
+			width: 100%;
+			margin: 0 0 15pt 0;
+			td, th { 
+				padding: 6pt 2pt;
+				font-size: 10pt !important;
+			}
+			td.pic img { display: none; }
+			td.pic { width: 1px; padding: 0; }
+			td {
+				input[type=text] {
+					width: 15pt;
+					padding: 2pt;
+				}
+			}
+		}
+		.checkout {
+			width: 100%;
+			a.checkout-button {
+				font-size: 20pt;
+				margin: 0 0 10pt 0;
+				padding: 8pt 20pt;
+			}
+		}
+	}
+	
+	
+	
+	
 	#footer {
 		height: auto;
 		.content-inner {
