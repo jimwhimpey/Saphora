@@ -515,6 +515,8 @@ body {
       -ms-transition: background-position 0.1s linear;
       -o-transition: background-position 0.1s linear;
       transition: background-position 0.1s linear; }
+  .cart table tr.total .grand-total {
+    text-align: center; }
 .cart .checkout {
   width: 700px;
   text-align: right; }
