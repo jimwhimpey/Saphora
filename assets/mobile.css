@@ -50,4 +50,15 @@
             margin: 0 0 20pt 0; }
 
   .banner {
-    display: none; } }
+    display: none; }
+
+  #footer {
+    height: auto; }
+    #footer .content-inner {
+      width: 80%;
+      padding-bottom: 30pt;
+      background-image: none; }
+      #footer .content-inner .contact-info, #footer .content-inner .store-info {
+        width: 100%;
+        float: none;
+        text-align: left !important; } }
