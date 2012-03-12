@@ -138,6 +138,11 @@
       margin: 0 0 10pt 0;
       padding: 8pt 20pt; }
 
+  .collection .content-inner {
+    padding-top: 20pt; }
+    .collection .content-inner h2 {
+      line-height: 1.5em; }
+
   #footer {
     height: auto; }
     #footer .content-inner {
