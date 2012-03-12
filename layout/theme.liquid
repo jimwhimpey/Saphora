@@ -6,7 +6,6 @@
 		<title>{{ shop.name }} &mdash; {{ page_title }}</title>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
 
 		{{ 'stylesheet.css' | asset_url | stylesheet_tag }}
 		{{ 'mobile.css' | asset_url | stylesheet_tag }}
@@ -20,6 +19,8 @@
 		<script type="text/javascript" src="{{ 'saphora.js' | asset_url }}"></script>
 
 		{{ content_for_header }}
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	</head>
 

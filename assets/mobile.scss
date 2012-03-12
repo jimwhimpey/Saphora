@@ -1,0 +1,68 @@
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			MOBILE STYLES
+		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+
+	.header {
+		height: auto;
+		padding: 20pt 0;
+		.content-inner { 
+			width: 100%;
+			h1, ul.navigation, .cart {
+				position: relative !important;
+				top: auto !important;
+				left: auto !important;
+				right: auto !important;
+			}
+			h1 { margin: 0 0 20pt 20pt; }
+			ul.navigation { margin-bottom: 20pt; }
+			ul.navigation, .cart { 
+				width: 80% !important; 
+				overflow: hidden;
+				margin-left: 20pt;
+				text-align: left;
+			}
+			.cart { clear: left; }
+		}
+	}
+	
+	#content {
+		.content-inner { 
+			width: 100%;
+			ul.product-collection {
+				padding: 20pt 0;
+				li {
+					width: 100%;
+					margin: 0 0 20pt 0;
+					float: none !important;
+					a.product-image {
+						width: 100%;
+						margin: 0 0 10pt 0;
+						display: block;
+						text-align: center;
+						float: none;
+					}
+					div.product-details {
+						float: none;
+						width: 80%;
+						padding: 0 10%;
+						h3.product-name {
+							margin: 0 0 10pt 0;
+						}
+						p.product-description {
+							margin: 0 0 10pt 0;
+						}
+						p.product-price {
+							margin: 0 0 20pt 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	.banner { display: none; }
+
+}
