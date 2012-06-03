@@ -6,7 +6,7 @@
 			{% for image in product.images %}
 				{% if forloop.first %}
 			    <div class="main">
-			    	<a href="{{ image | product_img_url: 'original' }}" ><img src="{{ image | product_img_url: 'large' }}" width="480" /></a>
+			    	<a href="{{ image | product_img_url: 'original' }}" ><img src="{{ image | product_img_url: 'large' }}" /></a>
 			    </div>
 					<ul>
 		    {% else %}

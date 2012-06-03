@@ -577,6 +577,29 @@ body {
   .cart .empty a:hover {
     border-bottom: 1px solid #D095B8; }
 
+#shipping-calculator {
+  width: 360px;
+  padding: 10px;
+  margin: 30px 0 0 320px;
+  border: 1px solid #CCC;
+  background: #F1F1F1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 1.2em; }
+  #shipping-calculator h3 {
+    font-weight: bold;
+    margin: 0 0 10px 0; }
+  #shipping-calculator p {
+    font-size: 14px;
+    margin: 0 0 8px 0; }
+  #shipping-calculator #shipping-rates-feedback {
+    border-top: 1px solid #BBB;
+    padding-top: 8px; }
+  #shipping-calculator #shipping-rates {
+    list-style: square;
+    padding-left: 20px; }
+
 /******************************************************************************/
 /* FOOTER */
 #footer {
